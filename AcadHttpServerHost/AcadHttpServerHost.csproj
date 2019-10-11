@@ -77,12 +77,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcadActionController.cs" />
-    <Compile Include="AcadSysVar.cs" />
+    <Compile Include="Controllers\AcadActionController.cs" />
+    <Compile Include="Controllers\DrawController.cs" />
+    <Compile Include="Models\AcadSysVar.cs" />
     <Compile Include="HttpServerHostInitializer.cs" />
+    <Compile Include="Models\CircleArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="SysVariableController.cs" />
+    <Compile Include="Controllers\SysVariableController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

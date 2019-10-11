@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AcadHttpServerHost
+namespace AcadHttpServerHost.Models
 {
     public class AcadSysVar
     {

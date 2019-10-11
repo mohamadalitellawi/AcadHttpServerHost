@@ -1,4 +1,5 @@
 ﻿using AcadHttpServerHost;
+using AcadHttpServerHost.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,9 @@ namespace MAT.CAD.WebApi
             try
             {
                 App.GetSystemVariable("CTAB");
-                App.SetSystemVariable(new AcadSysVar { Name = "CLAYER", Value = "1" });
+                App.SetSystemVariable(new AcadSysVar { Name = "CLAYER", Value = "0" });
+
+                App.DrawCircle(200, 0, 0, 0);
             }
             catch (Exception ex)
             {
@@ -58,6 +61,24 @@ namespace MAT.CAD.WebApi
 
             string txt = resMsg.Content.ReadAsAsync<string>().Result;
             Console.WriteLine(txt); 
+
+        }
+
+        private void DrawCircle(double radius , double x,double y, double z)
+        {
+
+            CircleArgs circleArgs = new CircleArgs
+            {
+                X = x,
+                Y = y,
+                Z = z,
+                Radius = radius
+            };
+
+            HttpResponseMessage resMsg = _client.PutAsJsonAsync("api/Draw", circleArgs).Result;
+            string txt = resMsg.Content.ReadAsAsync<string>().Result;
+
+            Console.WriteLine(txt);
 
         }
     }

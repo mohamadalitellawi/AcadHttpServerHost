@@ -6,10 +6,11 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using AcadHttpServerHost.Models;
 using Autodesk.AutoCAD.ApplicationServices;
 using Autodesk.AutoCAD.DatabaseServices;
 
-namespace AcadHttpServerHost
+namespace AcadHttpServerHost.Controllers
 {
     public class SysVariableController : AcadActionController
     {

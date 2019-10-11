@@ -2,7 +2,7 @@
 using System.Text;
 using System.Web.Http;
 
-namespace AcadHttpServerHost
+namespace AcadHttpServerHost.Controllers
 {
     public class AcadActionController : ApiController
     {
